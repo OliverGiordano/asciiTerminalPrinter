@@ -1,5 +1,4 @@
 use std::env;
-use rand::{self, Rng};
 use colored::Colorize;
 use image::{GenericImageView, Pixel};
 
@@ -18,15 +17,10 @@ fn main() {
         } else if args[1] == "--image" {
             file_path = &args[2];
         }
+    } else {
+        println!("no args");
+        return;
     }
-
-
-    
-    let mut rng = rand::thread_rng();
-    let img_select = rng.gen_range(1..=12);
-
-    println!("{}", img_select);
-
     let image = image::open(file_path).unwrap();
     
     let new_image = image.resize_exact(60, 30, image::imageops::FilterType::Lanczos3);
