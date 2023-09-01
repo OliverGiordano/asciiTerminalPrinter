@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd ~/bin/imageToCmdln
 range=$(ls | grep .png | wc -l)
 
 selection=$((1+$RANDOM%$range))
