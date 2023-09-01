@@ -1,4 +1,5 @@
-This is intendend to print pokemon into the terminal on launch
+This is intendend to print pokemon into the terminal when the terminal launches
+
 
 example:
 ![Piplup](https://github.com/Turtlemaster13/asciiTerminalPrinter/assets/104543638/a89c0827-50a7-4569-a238-e07106190b15)
