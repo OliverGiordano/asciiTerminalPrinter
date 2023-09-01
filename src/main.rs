@@ -24,11 +24,9 @@ fn main() {
     let image = image::open(file_path).unwrap();
     
     let new_image = image.resize_exact(60, 30, image::imageops::FilterType::Lanczos3);
-    if let Err(err) = new_image.save("/home/oliver/Documents/imageToCmdln/src/temp.png"){
+    if let Err(err) = new_image.save(".temp.png"){
         println!("error");
         println!("{}", err);
-    } else {
-        println!("w");
     }
     
     for y in 0..new_image.dimensions().1 {
