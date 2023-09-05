@@ -36,7 +36,11 @@ fn main() {
             let brightness = get_brightness(pix_color[0], pix_color[1], pix_color[2]);
             if args.len() > 3{
                 if args[2] == "--blocks" || args[3] == "--blocks" {
-                    print!("{}", " ".on_truecolor(pix_color[0], pix_color[1], pix_color[2]));
+                    if pix_color[0] > 5 && pix_color[1] > 5 && pix_color[2] > 5 {
+                        print!("{}", " ".on_truecolor(pix_color[0], pix_color[1], pix_color[2]));
+                    } else {
+                        print!(" ");
+                    }
                 } else if args[2] == "--ascii" || args[3] == "--ascii" {
                     print!("{}", get_close_char(brightness).truecolor(pix_color[0], pix_color[1], pix_color[2]));
                 } else if args[2] == "--ascii_blocks" || args[3] == "--ascii_blocks"{
